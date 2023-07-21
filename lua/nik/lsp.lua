@@ -1,6 +1,6 @@
 local lsp = require('lsp-zero').preset({})
 require('mason').setup()
-local lspConfig = require('lspconfig')
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lsp.preset({
@@ -19,6 +19,11 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
+
+cmp.event:on(
+	'confirm_done',
+	cmp_autopairs.on_confirm_done()
+)
 
 lsp.setup_nvim_cmp({
 	mapping = cmp_mappings

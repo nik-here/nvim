@@ -1,11 +1,29 @@
 require("lazy").setup({
 	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			local configs = require("nvim-treesitter.configs")
+
+			configs.setup({
+				ensure_installed = {
+					"c", "lua", "vim", "vimdoc", "json", "yaml", "typescript", "tsx",
+					"css", "rust", "toml",
+					"javascript", "html", "bash"
+				},
+				sync_install = false,
+				highlight = { enable = true },
+				indent = { enable = true },
+			})
+		end
+	},
+	{
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
 		dependencies = {
 			-- LSP Support
 			{ 'neovim/nvim-lspconfig' }, -- Required
-			{                         -- Optional
+			{       -- Optional
 				'williamboman/mason.nvim',
 				build = function()
 					pcall(vim.cmd, 'MasonUpdate')
@@ -14,9 +32,9 @@ require("lazy").setup({
 			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
 			-- Autocompletion
-			{ 'hrsh7th/nvim-cmp' },  -- Required
+			{ 'hrsh7th/nvim-cmp' }, -- Required
 			{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
-			{ 'L3MON4D3/LuaSnip' },  -- Required
+			{ 'L3MON4D3/LuaSnip' }, -- Required
 		}
 	},
 	{
@@ -60,6 +78,18 @@ require("lazy").setup({
 	"github/copilot.vim",
 	"theprimeagen/harpoon",
 	"tpope/vim-fugitive",
+	{
+		'windwp/nvim-ts-autotag',
+		event = "InsertEnter",
+		config = function()
+			require('nvim-ts-autotag').setup()
+		end,
+	},
+	{
+		'windwp/nvim-autopairs',
+		event = "InsertEnter",
+		opts = {} -- this is equalent to setup({}) function
+	},
 	{
 		"iamcco/markdown-preview.nvim",
 		build = "cd app && npm install",
