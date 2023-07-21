@@ -73,6 +73,7 @@ require("lazy").setup({
 		tag = '0.1.2',
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
+	'mbbill/undotree',
 	'mfussenegger/nvim-dap',
 	'simrat39/rust-tools.nvim',
 	"github/copilot.vim",

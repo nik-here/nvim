@@ -75,3 +75,6 @@ vim.keymap.set("n", "<leader>rca", function() vim.cmd("RustCodeAction") end)
 vim.keymap.set("n", "<leader>rd", function() vim.cmd("RustDebuggables") end)
 vim.keymap.set("n", "<leader>rha", function() vim.cmd("RustHoverActions") end)
 vim.keymap.set("n", "<leader>rr", function() vim.cmd("RustRunnables") end)
+
+-- undo-tree
+vim.keymap.set("n", "<leader>u", function() vim.cmd("UndotreeToggle") end)
