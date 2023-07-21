@@ -57,8 +57,17 @@ require("lazy").setup({
 	},
 	'mfussenegger/nvim-dap',
 	'simrat39/rust-tools.nvim',
+	"github/copilot.vim",
 	"theprimeagen/harpoon",
 	"tpope/vim-fugitive",
+	{
+		"iamcco/markdown-preview.nvim",
+		build = "cd app && npm install",
+		config = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	},
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
