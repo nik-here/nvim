@@ -30,6 +30,7 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 
 -- Buffer
 vim.keymap.set('n', '<leader>x', function() vim.cmd("bd") end, {})
+vim.keymap.set('n', '<leader>X', function() vim.cmd("bd!") end, {})
 
 -- Harpoon
 vim.keymap.set("n", "<leader>a", mark.add_file)
