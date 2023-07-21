@@ -1,6 +1,5 @@
 local lsp = require('lsp-zero').preset({})
 require('mason').setup()
-local rt = require("rust-tools")
 local lspConfig = require('lspconfig')
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -33,7 +32,6 @@ lsp.on_attach(function(client, bufnr)
 	lsp.default_keymaps({ buffer = bufnr, preserve_mappings = false })
 end)
 
-rt.setup()
 lspConfig.rust_analyzer.setup({
 	settings = {
 		["rust-analyzer"] = {

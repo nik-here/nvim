@@ -1,7 +1,12 @@
 local builtin = require('telescope.builtin')
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
+local widgets = require('dap.ui.widgets')
+local dap = require('dap')
+local my_sidebar = widgets.sidebar(widgets.scopes)
 
+-- utils
+vim.keymap.set("n", ";", ":", { silent = false })
 vim.g.mapleader = " "
 vim.keymap.set("i", "jj", "<ESC>", { silent = true })
 
@@ -45,3 +50,27 @@ vim.keymap.set("n", "<leader>e", function() vim.cmd("NvimTreeToggle") end)
 
 -- Copy / Paste
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+
+-- dap
+vim.keymap.set("n", "<leader>dc", function() dap.continue() end)
+vim.keymap.set("n", "<leader>do", function() dap.step_over() end)
+vim.keymap.set("n", "<leader>di", function() dap.step_into() end)
+vim.keymap.set("n", "<leader>dt", function() dap.step_out() end)
+vim.keymap.set("n", "<leader>db", function() dap.toggle_breakpoint() end)
+vim.keymap.set("n", "<leader>dr", function() dap.repl.open() end)
+vim.keymap.set("n", "<leader>dl", function() dap.run_last() end)
+vim.keymap.set("n", "<leader>ds", function()
+	my_sidebar.open()
+end)
+vim.keymap.set("n", "<leader>dh", function()
+	widgets.hover()
+end)
+vim.keymap.set("n", "<leader>dp", function()
+	widgets.preview()
+end)
+
+-- rust-tools
+vim.keymap.set("n", "<leader>rca", function() vim.cmd("RustCodeAction") end)
+vim.keymap.set("n", "<leader>rd", function() vim.cmd("RustDebuggables") end)
+vim.keymap.set("n", "<leader>rha", function() vim.cmd("RustHoverActions") end)
+vim.keymap.set("n", "<leader>rr", function() vim.cmd("RustRunnables") end)
