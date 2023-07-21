@@ -17,6 +17,15 @@ local opts = {
 	dap = {
 		adapter = require('rust-tools.dap').get_codelldb_adapter(
 			codelldb_path, liblldb_path)
+	},
+	server = {
+		settings = {
+			["rust-analyzer"] = {
+				check = {
+					command = "clippy",
+				}	
+			},
+		}
 	}
 }
 

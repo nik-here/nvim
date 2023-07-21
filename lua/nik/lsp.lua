@@ -32,13 +32,4 @@ lsp.on_attach(function(client, bufnr)
 	lsp.default_keymaps({ buffer = bufnr, preserve_mappings = false })
 end)
 
-lspConfig.rust_analyzer.setup({
-	settings = {
-		["rust-analyzer"] = {
-			check = {
-				command = "clippy"
-			},
-		},
-	},
-})
 lsp.setup()
