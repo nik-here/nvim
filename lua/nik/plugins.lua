@@ -79,6 +79,7 @@ require("lazy").setup({
 	"github/copilot.vim",
 	"theprimeagen/harpoon",
 	"tpope/vim-fugitive",
+	'numToStr/Comment.nvim',
 	{
 		'windwp/nvim-ts-autotag',
 		event = "InsertEnter",

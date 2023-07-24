@@ -29,16 +29,33 @@ end, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 
 -- Buffer
-vim.keymap.set('n', '<leader>x', function() vim.cmd("bd") end, {})
+vim.keymap.set('n', '<leader>x', function() vim.cmd("bp|bd #") end, { silent = true })
 vim.keymap.set('n', '<leader>X', function() vim.cmd("bd!") end, {})
 
--- Harpoon
+-- Harpoon mac
 vim.keymap.set("n", "<leader>a", mark.add_file)
 vim.keymap.set("n", "∑", ui.toggle_quick_menu)
 vim.keymap.set("n", "¡", function() ui.nav_file(1) end)
 vim.keymap.set("n", "™", function() ui.nav_file(2) end)
 vim.keymap.set("n", "£", function() ui.nav_file(3) end)
 vim.keymap.set("n", "¢", function() ui.nav_file(4) end)
+vim.keymap.set("n", "∞", function() ui.nav_file(5) end)
+vim.keymap.set("n", "§", function() ui.nav_file(6) end)
+vim.keymap.set("n", "¶", function() ui.nav_file(7) end)
+vim.keymap.set("n", "•", function() ui.nav_file(8) end)
+vim.keymap.set("n", "ª", function() ui.nav_file(9) end)
+
+-- Harpoon linux
+vim.keymap.set("n", "<ALT+w>", ui.toggle_quick_menu)
+vim.keymap.set("n", "<ALT+1>", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<ALT+2>", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<ALT+3>", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<ALT+4>", function() ui.nav_file(4) end)
+vim.keymap.set("n", "<ALT+5>", function() ui.nav_file(5) end)
+vim.keymap.set("n", "<ALT+6>", function() ui.nav_file(6) end)
+vim.keymap.set("n", "<ALT+7>", function() ui.nav_file(7) end)
+vim.keymap.set("n", "<ALT+8>", function() ui.nav_file(8) end)
+vim.keymap.set("n", "<ALT+9>", function() ui.nav_file(9) end)
 
 -- Git
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
