@@ -10,12 +10,16 @@ vim.keymap.set("n", ";", ":", { silent = false })
 vim.g.mapleader = " "
 vim.keymap.set("i", "jj", "<ESC>", { silent = true })
 
--- Window Management
+-- Window Management mac
 vim.keymap.set("n", "æ", "<C-w>v")
 vim.keymap.set("n", "<C-h>", "<C-w>h");
 vim.keymap.set("n", "<C-j>", "<C-w>j");
 vim.keymap.set("n", "<C-k>", "<C-w>k");
 vim.keymap.set("n", "<C-l>", "<C-w>l");
+
+-- Window Management linux
+vim.keymap.set("n", "<C-'>", "<C-w>v")
+vim.keymap.set("n", "<C-`>", "<C-w>v")
 
 -- Telescope
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
