@@ -81,6 +81,12 @@ require("lazy").setup({
 	"tpope/vim-fugitive",
 	'numToStr/Comment.nvim',
 	{
+		'stevearc/aerial.nvim',
+		config = function()
+			require('aerial').setup()
+		end
+	},
+	{
 		'windwp/nvim-ts-autotag',
 		event = "InsertEnter",
 		config = function()

@@ -23,7 +23,7 @@ local opts = {
 			["rust-analyzer"] = {
 				check = {
 					command = "clippy",
-				}	
+				}
 			},
 		}
 	}

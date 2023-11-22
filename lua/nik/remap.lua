@@ -6,7 +6,7 @@ local dap = require('dap')
 local my_sidebar = widgets.sidebar(widgets.scopes)
 
 -- utils
-vim.keymap.set("n", ";", ":", { silent = false })
+-- vim.keymap.set("n", ";", ":", { silent = false })
 vim.g.mapleader = " "
 vim.keymap.set("i", "jj", "<ESC>", { silent = true })
 
@@ -97,3 +97,6 @@ vim.keymap.set("n", "<leader>rr", function() vim.cmd("RustRunnables") end)
 
 -- undo-tree
 vim.keymap.set("n", "<leader>u", function() vim.cmd("UndotreeToggle") end)
+
+
+-- aerial
