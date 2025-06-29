@@ -1,8 +1,8 @@
 function setTermMapping()
-	if vim.fn.has('macunix') == 1 then
+	if vim.fn.has("macunix") == 1 then
 		return [[˙]]
 	else
-		return [[<A-h>]]
+		return [[<A-j>]]
 	end
 end
 

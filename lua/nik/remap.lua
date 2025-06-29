@@ -10,8 +10,10 @@ local ui = require("harpoon.ui")
 vim.g.mapleader = " "
 vim.keymap.set("i", "jj", "<ESC>", { silent = true })
 
+vim.keymap.set("n", "-", "<cmd>Oil<CR>")
+
 -- Window Management mac
-vim.keymap.set("n", "<C-\\>", "<C-w>v")
+vim.keymap.set("n", "<C-\\>", "<C-w>v<C-w>l")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
@@ -20,15 +22,15 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 -- Window Management linux
 
 -- Telescope
-vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-vim.keymap.set("n", "<leader>fa", function()
+vim.keymap.set("n", "<leader>sf", builtin.find_files, {})
+vim.keymap.set("n", "<leader>sa", function()
 	vim.cmd("Telescope find_files follow=true no_ignore=true hidden=true")
 end, {})
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-vim.keymap.set("n", "<leader>fh", function()
+vim.keymap.set("n", "<leader>sg", builtin.live_grep, {})
+vim.keymap.set("n", "<leader>sh", function()
 	vim.cmd("Telescope harpoon marks")
 end, {})
-vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+vim.keymap.set("n", "<leader>sb", builtin.buffers, {})
 
 -- Buffer
 vim.keymap.set("n", "<leader>x", function()
