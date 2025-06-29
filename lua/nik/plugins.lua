@@ -676,6 +676,11 @@ require("lazy").setup({
 			-- - sd'   - [S]urround [D]elete [']quotes
 			-- - sr)'  - [S]urround [R]eplace [)] [']
 			require("mini.surround").setup()
+			local indentscope = require("mini.indentscope")
+			indentscope.setup({ draw = {
+				delay = 0,
+				animation = indentscope.gen_animation.none(),
+			} })
 
 			-- Simple and easy statusline.
 			--  You could remove this setup call if you don't like it,
@@ -733,6 +738,12 @@ require("lazy").setup({
 		--    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
 		--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 		--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		opts = {
+			enable = true,
+		},
 	},
 	{
 		"kevinhwang91/nvim-ufo",

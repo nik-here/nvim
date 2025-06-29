@@ -15,4 +15,6 @@ vim.o.smartcase = true
 
 vim.o.cursorline = true
 
+vim.opt.clipboard = "unnamedplus"
+
 vim.lsp.enable("gdscript")
