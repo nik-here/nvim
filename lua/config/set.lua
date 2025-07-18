@@ -1,9 +1,8 @@
-vim.cmd.colorscheme("catppuccin-frappe") -- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 vim.opt.scrolloff = 10
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
+vim.opt.smartindent = true
+vim.opt.colorcolumn = "80"
 
 vim.g.have_nerd_font = true
 vim.o.mouse = "a"
@@ -16,5 +15,3 @@ vim.o.smartcase = true
 vim.o.cursorline = true
 
 vim.opt.clipboard = "unnamedplus"
-
-vim.lsp.enable("gdscript")

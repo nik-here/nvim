@@ -8,7 +8,12 @@ end
 
 local term_mapping = setTermMapping()
 
-require("toggleterm").setup({
+return {
+ "akinsho/toggleterm.nvim",
+	config = function()
+		require("toggleterm").setup({
 	open_mapping = term_mapping,
 	size = 30,
-})
+		})
+	end
+}

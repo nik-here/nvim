@@ -1,7 +1,0 @@
-require("nik.lazy")
-require("nik.plugins")
-require("nik.lsp")
-require("nik.comment")
-require("nik.remap")
-require("nik.toggleTerm")
-require("nik.set")

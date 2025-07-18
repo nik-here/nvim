@@ -1,1 +1,1 @@
-require("nik")
+require("config")
