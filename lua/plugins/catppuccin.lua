@@ -7,7 +7,12 @@ return {
 			custom_highlights = function(colors)
 				local highlights = {}
 				local spell_options = { style = { "underline" }, bg = colors.red, fg = colors.base }
-				local spell_groups = { "SpellBad", "SpellCap", "SpellLocal", "SpellRare" }
+				local spell_groups = {
+					"SpellBad",
+					"SpellCap",
+					"SpellLocal",
+					"SpellRare",
+				}
 				for _, v in ipairs(spell_groups) do
 					highlights[v] = spell_options
 				end
