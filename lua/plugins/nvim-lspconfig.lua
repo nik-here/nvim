@@ -197,6 +197,19 @@ return {
 				end,
 			},
 		})
-		require("mason-lspconfig").setup()
+		require("mason-lspconfig").setup({
+			ensure_installed = {
+				"taplo",
+				"lua_ls",
+				"ts_ls",
+				"html",
+				"eslint",
+				"tailwindcss",
+				"jsonls",
+				"yamlls",
+				"markdown_oxide",
+			},
+			automatic_enable = true,
+		})
 	end,
 }
