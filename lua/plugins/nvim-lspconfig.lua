@@ -26,6 +26,7 @@ return {
 				"svelte",
 				"astro",
 				"htmlangular",
+				"markdown",
 				"json",
 				"jsonc",
 			},
