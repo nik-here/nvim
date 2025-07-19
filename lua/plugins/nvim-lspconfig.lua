@@ -109,7 +109,7 @@ return {
 				--  Useful when you're not sure what type a variable is and you want to see
 				--  the definition of its *type*, not where it was *defined*.
 				map("gt", require("telescope.builtin").lsp_type_definitions, "[G]oto [T]ype Definition")
-				map("<C-k>", function()
+				map("<leader>k", function()
 					vim.diagnostic.open_float()
 				end, "Open Diagnostic floting")
 
