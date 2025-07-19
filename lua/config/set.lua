@@ -13,3 +13,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 vim.o.cursorline = true
+
+-- Oil must be commentet out for downloading
+vim.opt.spell = true
+vim.opt.spelllang = "en,de"
