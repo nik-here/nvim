@@ -104,6 +104,9 @@ return {
 				--  Useful when you're not sure what type a variable is and you want to see
 				--  the definition of its *type*, not where it was *defined*.
 				map("gt", require("telescope.builtin").lsp_type_definitions, "[G]oto [T]ype Definition")
+				map("<C-k>", function()
+					vim.diagnostic.open_float()
+				end, "Open Diagnostic floting")
 
 				-- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
 				---@param client vim.lsp.Client
