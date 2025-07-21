@@ -9,7 +9,7 @@ return {
 				local spell_options = { style = { "underline" }, bg = colors.red, fg = colors.base }
 				local spell_groups = {
 					"SpellBad",
-					"SpellCap",
+					-- "SpellCap",
 					"SpellLocal",
 					"SpellRare",
 				}
