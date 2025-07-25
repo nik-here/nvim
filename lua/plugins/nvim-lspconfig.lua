@@ -12,6 +12,7 @@ return {
 
 		-- Allows extra capabilities provided by blink.cmp
 		"saghen/blink.cmp",
+		"jay-babu/mason-nvim-dap.nvim",
 	},
 	config = function()
 		vim.lsp.config("eslint", {
@@ -206,6 +207,8 @@ return {
 				end,
 			},
 		})
+		require("mason").setup()
+		require("mason-nvim-dap").setup()
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"taplo",
