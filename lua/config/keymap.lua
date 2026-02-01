@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("i", "jj", "<ESC>", { silent = true })
 
 -- Window Management
 vim.keymap.set("n", "<C-\\>", "<C-w>v<C-w>l")
