@@ -1,7 +1,7 @@
 vim.opt.scrolloff = 10
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.opt.smartindent = true
+-- vim.opt.smartindent = true
 vim.opt.colorcolumn = "80"
 vim.opt.swapfile = false
 
