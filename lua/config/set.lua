@@ -1,9 +1,11 @@
 vim.opt.scrolloff = 10
-vim.wo.number = true
-vim.wo.relativenumber = true
--- vim.opt.smartindent = true
-vim.opt.colorcolumn = "80"
-vim.opt.swapfile = false
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.autoindent = true
+vim.o.tabstop = 2
+vim.o.colorcolumn = "80"
+vim.o.swapfile = false
+vim.o.winborder = "rounded"
 
 vim.g.have_nerd_font = true
 vim.o.mouse = "a"
