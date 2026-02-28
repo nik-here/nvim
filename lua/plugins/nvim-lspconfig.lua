@@ -15,10 +15,8 @@ return {
 			filetypes = {
 				"javascript",
 				"javascriptreact",
-				"javascript.jsx",
 				"typescript",
 				"typescriptreact",
-				"typescript.tsx",
 				"vue",
 				"svelte",
 				"astro",
@@ -74,6 +72,7 @@ return {
 				-- WARN: This is not Goto Definition, this is Goto Declaration.
 				--  For example, in C this would take you to the header.
 				map("grD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+				map("<leader>k", vim.diagnostic.open_float, "Open diagnostic float")
 
 				-- The following two autocommands are used to highlight references of the
 				-- word under your cursor when your cursor rests there for a little while.
@@ -103,6 +102,13 @@ return {
 						end,
 					})
 				end
+
+				vim.api.nvim_create_autocmd("BufWritePre", {
+					buffer = event.buf,
+					callback = function()
+						vim.lsp.buf.format({ async = false, id = event.data.client_id })
+					end,
+				})
 
 				-- The following code creates a keymap to toggle inlay hints in your
 				-- code, if the language server you are using supports them
