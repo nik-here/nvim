@@ -3,6 +3,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.smartindent = true
 vim.opt.colorcolumn = "80"
+vim.opt.swapfile = false
 
 vim.g.have_nerd_font = true
 vim.o.mouse = "a"
